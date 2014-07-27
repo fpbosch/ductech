@@ -40,7 +40,14 @@
     <!-- Include the view file for the current controller/route -->
     <%- body %>
 
+    <ul class="menu">
+      <li><a href="#/view1">view1</a></li>
+      <li><a href="#/view2">view2</a></li>
+    </ul>
 
+    <div data-ng-view></div>
+
+    <div>Angular Require seed app: v<span app-version></span></div>
     <!--
 
       Client-side Javascript
@@ -52,11 +59,13 @@
       Here's an example of importing a few dependencies, in order:
     -->
     <!-- Bring in the socket.io client -->
-    <script type="text/javascript" src="/js/socket.io.js"></script>
+    <script src="/js/app/lib/requirejs/require.js" data-main="js/app/main.js"></script>
+
+    <!--<script type="text/javascript" src="/js/socket.io.js"></script>-->
     <!-- then beef it up with some convenience logic for talking to Sails.js -->
-    <script type="text/javascript" src="/js/sails.io.js"></script>
+    <!--<script type="text/javascript" src="/js/sails.io.js"></script>-->
     <!-- listen on socket.io for incoming messages -->
-    <script type="text/javascript" src="/js/app.js"></script>
+    <!--<script type="text/javascript" src="/js/app.js"></script>-->
 
     <!-- Your scripts here? -->
     <!-- Your scripts here? -->
